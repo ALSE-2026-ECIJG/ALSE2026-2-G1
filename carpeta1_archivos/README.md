@@ -1,1 +1,2 @@
-# carpeta1 - Linux y Git
+edicion de tecto de # carpeta1 - Linux y Git santy 
+
