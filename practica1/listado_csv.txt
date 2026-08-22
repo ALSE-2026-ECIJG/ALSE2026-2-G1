@@ -1,0 +1,6 @@
+aux_files/2015.csv
+aux_files/2016.csv
+aux_files/2017.csv
+aux_files/2018.csv
+aux_files/2019..csv
+aux_files/injury-statistics-work-related-claims-2018-csv.csv
