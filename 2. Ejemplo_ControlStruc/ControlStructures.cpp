@@ -63,7 +63,7 @@ int main()
     while (1)
     {
         /* code */
-        cout << "num1 positive" << endl;
+        cout << "num1 positive\n";
         cin >> num1;
         if (num1 < 0)
         {
@@ -152,6 +152,7 @@ int main()
     cin >> choice;
 
     // Perform operation using switch statement
+    choice='-';
     switch (choice)
     {
     case '+':
@@ -159,9 +160,12 @@ int main()
         break;
     case '-':
         cout << "The result is: " << num1 - num2 << endl;
+        cout << "The result is: " << num1 * num2 << endl;
+        cout << "The result is: " << num1 * num2 << endl;
         break;
     case '*':
         cout << "The result is: " << num1 * num2 << endl;
+        
         break;
     case '/':
         if (num2 != 0)
