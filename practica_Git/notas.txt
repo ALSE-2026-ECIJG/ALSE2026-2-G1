@@ -1,0 +1,4 @@
+Git init=Inicializar un repositorio(o control de versiones) sobre la carpeta en la que esta
+Git status=nos indica el estado en el que esta el repositorio
+Git add=agrega los archivos que no están en seguimiento o tuvieron cambios
+Git branch= validar en que rama se encuentran ubicados
