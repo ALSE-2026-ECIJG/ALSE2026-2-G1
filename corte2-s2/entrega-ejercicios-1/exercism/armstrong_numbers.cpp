@@ -1,39 +1,32 @@
-#include <iostream>
-#include <cmath>
+bool is_armstrong_number(int number) {
+    int original = number;
+    int digits = 0;
+    int sum = 0;
 
-using namespace std;
+    int temp = number;
 
-bool isArmstrongNumber(int numero) {
-    int original = numero;
-    int digitos = 0;
-    int suma = 0;
-
-    int temporal = numero;
-
-    while (temporal > 0) {
-        digitos++;
-        temporal /= 10;
+    if (number == 0) {
+        return true;
     }
 
-    temporal = numero;
-
-    while (temporal > 0) {
-        int digito = temporal % 10;
-        suma += pow(digito, digitos);
-        temporal /= 10;
+    while (temp > 0) {
+        digits++;
+        temp /= 10;
     }
 
-    return suma == original;
-}
+    temp = number;
 
-int main() {
-    int numero = 153;
+    while (temp > 0) {
+        int digit = temp % 10;
 
-    if (isArmstrongNumber(numero)) {
-        cout << "Es un numero de Armstrong" << endl;
-    } else {
-        cout << "No es un numero de Armstrong" << endl;
+        int power = 1;
+        for (int i = 0; i < digits; i++) {
+            power *= digit;
+        }
+
+        sum += power;
+        temp /= 10;
     }
 
-    return 0;
+    return sum == original;
 }
