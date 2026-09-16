@@ -42,18 +42,19 @@ int main() {
     cube2.setLength(5.0);
     std::cout << "Cube 2 New Volume: " << cube2.getVolume() << std::endl;
     std::cout << "Cube 2 New Surface Area: " << cube2.getSurfaceArea() << std::endl;
-    std::cout << "Cube 1 Colour: " << cube1.colour << std::endl;
+    /*std::cout << "Cube 1 Colour: " << cube1.colour << std::endl;
     std::cout << "Cube 2 Colour: " << cube2.colour << std::endl;
     cube1.colour = "Red";
     cube2.colour = "Blue";
     std::cout << "Cube 1 New Colour: " << cube1.colour << std::endl;
     std::cout << "Cube 2 New Colour: " << cube2.colour << std::endl;
-
+*/
     // Vehicle class examples
     Vehicle vehicle1("Toyota", 120);
     vehicle1.display();
     vehicle1.setSpeed(130);
     vehicle1.display();
+     vehicle1.display();
 
     // Car class examples (assuming Car is derived from Vehicle)
     Car car1("Honda", 150, 4, 4);

@@ -22,23 +22,23 @@ include_directories(include)
 #add_executable(VehicleUnified src/Vehicle.cpp)
 
 # Add the library for Cube
-#add_library(Cube src/Cube.cpp)
+add_library(Cube src/cube.cpp)
  
 # Add the library for Complex
-#add_library(Complex src/Complex.cpp)
+add_library(Complex src/complex.cpp)
 
 # Add the library for Vehicle
-#add_library(Vehicle src/Vehicle.cpp)
+add_library(Vehicle src/vehicle.cpp)
 # Add the library for Car
-#add_library(Car src/Car.cpp)
+add_library(Car src/car.cpp)
 # Add the library for AirVehicle
-#add_library(AirVehicle src/AirVehicle.cpp)
+add_library(AirVehicle src/air_vehicle.cpp)
 
-add_library(vector src/vector.cpp)
+add_library(vector src/vector2d.cpp)
 
 # Add executable to use all classes
-#add_executable(AllClasses src/main.cpp)
-#target_link_libraries(AllClasses Cube Complex Vehicle Car AirVehicle) # Link the libraries to the executable
+add_executable(AllClasses src/main.cpp)
+target_link_libraries(AllClasses Cube Complex Vehicle Car AirVehicle) # Link the libraries to the executable
 
 #add_executable(inheritance
 #    src/Vehicle.cpp
@@ -47,4 +47,4 @@ add_library(vector src/vector.cpp)
 #    src/mainInheritance.cpp
 #)
 add_executable(mainVector src/mainVector.cpp)# Add the executable for mainCube.cpp
-target_link_libraries(mainVector Cube)
+target_link_libraries(mainVector vector)

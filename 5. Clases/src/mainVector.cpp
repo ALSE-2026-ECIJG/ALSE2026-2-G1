@@ -1,4 +1,4 @@
-#include "include/vector2d.h"
+#include "vector2d.h"
 
 int main() {
     Vector2D v1(3, 4), v2(1, 2);
