@@ -19,13 +19,13 @@ void byReference(int &b)
 }
 
 // Function that takes an argument by reference but read-only
-int byReferenceReadOnly(const int &c)
+char byReferenceReadOnly(const int &c)
 {
     // c = c * 2; // This line would cause a compilation error
     cout << "Inside byReferenceReadOnly, c = " << c << endl;
     cout << "Using b to compute square of c: " << c * c << endl;
     cout << "Local b address = " << &c << endl;
-    return c * c;
+    return 'a';
 }
 
 double add(double a, double b);
@@ -58,8 +58,8 @@ int main()
     double result = add(3.5, 2.5);
     cout << "Result of add(3.5, 2.5) = " << result << endl;
 
-    result = add(3.5); // Using default value for the second parameter
-    cout << "Result of add(3.5) = " << 3.5 + add(3.5) << endl;
+    //result = add(3.5); // Using default value for the second parameter
+    //cout << "Result of add(3.5) = " << 3.5 + add(3.5) << endl;
 
     // Demonstrate isPrime function
     if (isPrime(num1))
