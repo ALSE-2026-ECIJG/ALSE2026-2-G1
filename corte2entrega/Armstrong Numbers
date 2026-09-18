@@ -1,0 +1,25 @@
+#pragma once
+#include <cmath>
+namespace armstrong_numbers {
+bool is_armstrong_number(int number) {
+    int original = number;
+    int cantidad = 0;
+    int temporal = number;
+    if (temporal == 0) {
+        cantidad = 1;
+    } else {
+        while (temporal > 0) {
+            cantidad++;
+            temporal /= 10;
+        }
+    }
+    int suma = 0;
+    temporal = number;
+    while (temporal > 0) {
+        int digito = temporal % 10;
+        suma += static_cast<int>(std::pow(digito, cantidad));
+        temporal /= 10;
+    }
+    return suma == original;
+}
+}
