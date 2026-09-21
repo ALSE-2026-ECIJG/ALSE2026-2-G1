@@ -1,0 +1,1 @@
+add_executable(exercism_robot_simulator main.cpp)
