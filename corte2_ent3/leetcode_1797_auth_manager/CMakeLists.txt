@@ -1,0 +1,1 @@
+add_executable(leetcode_1797_auth_manager main.cpp)
