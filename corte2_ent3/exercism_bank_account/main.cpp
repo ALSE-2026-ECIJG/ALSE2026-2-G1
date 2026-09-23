@@ -133,23 +133,15 @@ void testConcurrent() {
     acc.open();
 
     const int numThreads = 10;
-    const int operationsPerThread = 100;
+    const int operationsPerThread = 1000;
     const int amountPerOp = 1;
 
     std::vector<std::thread> threads;
 
     for (int i = 0; i < numThreads; ++i) {
-        threads.emplace_back([&acc, i]() {
+        threads.emplace_back([&acc]() {
             for (int j = 0; j < operationsPerThread; ++j) {
-                try {
-                    if (i % 2 == 0) {
-                        acc.deposit(amountPerOp);
-                    } else {
-                        acc.withdraw(amountPerOp);
-                    }
-                } catch (const std::runtime_error&) {
-                    // Ignorar: puede ocurrir si otro hilo retiro mas de lo disponible
-                }
+                acc.deposit(amountPerOp);
             }
         });
     }
@@ -159,13 +151,16 @@ void testConcurrent() {
     }
 
     int finalBalance = acc.balance();
-    std::cout << "Balance final tras " << numThreads << " hilos: " << finalBalance << std::endl;
-    std::cout << "Balance esperado: " << (numThreads / 2) * operationsPerThread * amountPerOp << std::endl;
+    int expected = numThreads * operationsPerThread * amountPerOp;
 
-    if (finalBalance == (numThreads / 2) * operationsPerThread * amountPerOp) {
-        std::cout << "PRUEBA CONCURRENTE: PASS" << std::endl;
+    std::cout << "10 hilos x 1000 depositos de 1 unidad" << std::endl;
+    std::cout << "Balance final: " << finalBalance << std::endl;
+    std::cout << "Balance esperado: " << expected << std::endl;
+
+    if (finalBalance == expected) {
+        std::cout << "PRUEBA CONCURRENTE: PASS (sin condiciones de carrera)" << std::endl;
     } else {
-        std::cout << "PRUEBA CONCURRENTE: FAIL (condicion de carrera detectada)" << std::endl;
+        std::cout << "PRUEBA CONCURRENTE: FAIL" << std::endl;
     }
 }
 
