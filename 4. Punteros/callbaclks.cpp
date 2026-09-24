@@ -44,14 +44,20 @@ void processText(char *text, char (*callback)(char))
 
 int main()
 {
-    char text1[] = "Callbacks in C";
-    char text2[] = "Callbacks in C";
+    char text1[] = "Callbac";
+    char text2[] = "Callbacks in C   jhkj";
     char text3[] = "Callbacks in C";
+    char* pchar;
 
     printf("Texto original: %s\n\n", text1);
 
     processText(text1, toUpperCase);
     printf("Mayúsculas: %s\n", text1);
+    pchar=&text1[0];
+    *pchar='f';
+    pchar++;//text1[1]
+    *pchar='a';
+
 
     processText(text2, toLowerCase);
     printf("Minúsculas: %s\n", text2);

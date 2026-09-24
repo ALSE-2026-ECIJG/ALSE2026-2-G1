@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-int main(int argc, char *argv[]) {// ./dsafasdf 123 adsfsad.txt
+int main(int argc, char *argv[]) {// ./dsafasdf 123 adsfsad.txt //char * name[]-> ["./point","12","50",'asdfasdfasd'] 
   /*First example: Prints the number of arguments and content*/
     std::cout << "Number of arguments: " << argc << std::endl;
 
