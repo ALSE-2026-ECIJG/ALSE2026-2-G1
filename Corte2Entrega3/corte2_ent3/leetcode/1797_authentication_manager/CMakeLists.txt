@@ -1,0 +1,2 @@
+add_executable(authentication_manager main.cpp)
+target_include_directories(authentication_manager PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

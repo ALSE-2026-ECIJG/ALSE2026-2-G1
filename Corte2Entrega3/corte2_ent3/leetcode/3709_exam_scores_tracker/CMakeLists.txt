@@ -1,0 +1,2 @@
+add_executable(exam_scores_tracker main.cpp)
+target_include_directories(exam_scores_tracker PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
