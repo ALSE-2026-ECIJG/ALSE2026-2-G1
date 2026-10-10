@@ -11,4 +11,8 @@ add_executable(BibliotecaApp
     src/Biblioteca.cpp
     src/Vehiculo.cpp
     src/SistemaAlquiler.cpp
+    src/Producto.cpp
+    src/ItemCarrito.cpp
+    src/CarritoCompras.cpp
+    src/Usuario.cpp
 )
