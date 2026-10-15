@@ -1,0 +1,13 @@
+PROJECT_NAME           = "MedidorEnergia"
+PROJECT_BRIEF          = "Simulador de medidores de energia en C++"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = include src README.md
+FILE_PATTERNS          = *.h *.cpp *.md
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+GENERATE_HTML          = YES
+HTML_OUTPUT            = .
+GENERATE_LATEX         = NO
+OUTPUT_LANGUAGE        = Spanish
